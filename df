@@ -1,0 +1,46 @@
+switch (querynumber)
+    {
+    case 1:
+        strcpy(query, "NM");
+        break;
+    case 2:
+        strcpy(query, "AN");
+        break;
+    case 3:
+        strcpy(query, "AW");
+        break;
+    case 4:
+        strcpy(query, "DE");
+        break;
+    case 5:
+        strcpy(query, "MP");
+        break;
+    case 6:
+        strcpy(query, "BP");
+        break;
+    case 7:
+        strcpy(query, "SO");
+        break;
+    default:
+        break;
+    }
+
+    printf("Periodic table loaded...\n");
+    printf("How do you want to query it?\n");
+    printf("1.Name\n2.Atomic Number\n3.Atomic Weight\n4.Density\n5.Melting Point\n6.Boiling Point\n7.Symbol\n");
+
+    ht_set(table, "NM", getfield(line, 1));
+            ht_set(table, "AN", getfield(line, 2));
+            ht_set(table, "AW", getfield(line, 3));
+            ht_set(table, "DE", getfield(line, 4));
+            ht_set(table, "MP", getfield(line, 5));
+            ht_set(table, "BP", getfield(line, 6));
+            ht_set(table, "SO", getfield(line, 7));
+            printf("%s\n", ht_get(table, "AN"));
+            printf("%s\n", ht_get(table, "AW"));
+            printf("%s\n", ht_get(table, "DE"));
+            printf("%s\n", ht_get(table, "MP"));
+            printf("%s\n", ht_get(table, "BP"));
+            printf("%s\n", ht_get(table, "MP"));
+            printf("%s\n", ht_get(table, "SO"));
+            printf("%s\n", ht_get(table, "NM"));
